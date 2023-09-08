@@ -1,6 +1,5 @@
 import { Request, Response } from "express";
 import bcryptjs from "bcryptjs"
-import Randomstring from "randomstring";
 import User, { IUser } from "../model/usersModel";
 import generateJWT from "../helpers/generateJWT";
 

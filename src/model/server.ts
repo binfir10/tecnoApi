@@ -14,10 +14,9 @@ export class Server {
 
     constructor() {
         this.app = express();
-        this.port = process.env.PORT;
-        this.authPath = "/auth"
-        this.ordersPath = "/orders"
-
+        this.port = process.env.PORT || 3000;
+        this.authPath = "/auth";
+        this.ordersPath = "/orders";
         this.conectDB()
         this.middlewares()
         this.routes()
@@ -28,8 +27,8 @@ export class Server {
     }
 
     middlewares(): void {
-        this.app.use(cors())
-        this.app.use(express.json())
+        this.app.use(cors());
+        this.app.use(express.json());
     }
 
     routes(): void {
